@@ -20,7 +20,9 @@
             {{- range $pages.PageGroups -}}
                 <h3 class="group-title">{{ .Key }}</h3>
                 {{- range .Pages -}}
-                    {{- if ne $.Site.Params.section.compact false -}}
+                    {{- if ne $.Site.Params.section.summary false -}}
+                        {{- .Render "summary" -}}
+                    {{- else -}}
                         <article class="archive-item">
                             <a href="{{ .RelPermalink }}" class="archive-item-link">
                                 {{- .Title -}}
@@ -29,8 +31,6 @@
                                 {{- $.Site.Params.section.dateFormat | default "01-02" | .Date.Format -}}
                             </span>
                         </article>
-                    {{- else -}}
-                        {{- .Render "summary" -}}
                     {{- end -}}
                 {{- end -}}
             {{- end -}}
