@@ -83,6 +83,10 @@
   color: $global-font-color;
   border-bottom: 1px dashed $global-border-color;
 
+  .single-title {
+    text-align: left;
+  }
+
   [theme=dark] & {
     color: $global-font-color-dark;
     border-bottom: 1px dashed $global-border-color-dark;
