@@ -142,6 +142,8 @@ enableEmoji = true
           gravatarEmail = ""
           # URL of avatar shown in home page
           avatarURL = "/images/avatar.png"
+          # Link that avatar points to
+          avatarLink = "/about"
           # title shown in home page (HTML format is supported)
           title = ""
           # subtitle shown in home page

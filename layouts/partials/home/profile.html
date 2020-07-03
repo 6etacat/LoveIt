@@ -8,7 +8,7 @@
         <div class="home-avatar">
             {{- $menus := $.Site.Menus.main | default slice -}}
             {{- with index $menus 0 -}}
-                {{- $url := .URL | relLangURL -}}
+                {{- $url := $.Site.Params.Home.Profile.AvatarLink | default .URL | relLangURL -}}
                 {{- with .Page -}}
                     {{- $url = .RelPermalink -}}
                 {{- end -}}
