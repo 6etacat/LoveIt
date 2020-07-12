@@ -1,3 +1,13 @@
-{{- $id := dict "Content" (trim .Inner "\n") "Scratch" .Page.Scratch | partial "function/id.html" -}}
-<div class="mermaid" id="{{ $id }}"></div>
-{{- .Page.Scratch.SetInMap "this" "mermaid" true -}}
+{{ if and (.IsNamedParams) (ne (.Get "file") "") }}
+    {{- $id := dict "Content" (trim (readFile (.Get "file")) "\n") "Scratch" .Page.Scratch | partial "function/id.html" -}}
+    <div class="mermaid" id="{{ $id }}"></div>
+    {{- .Page.Scratch.SetInMap "this" "mermaid" true -}}
+{{ else if .Params }}
+    {{- $id := dict "Content" (trim (readFile (index .Params 0)) "\n") "Scratch" .Page.Scratch | partial "function/id.html" -}}
+    <div class="mermaid" id="{{ $id }}"></div>
+    {{- .Page.Scratch.SetInMap "this" "mermaid" true -}}
+{{ else }}
+    {{- $id := dict "Content" (trim .Inner "\n") "Scratch" .Page.Scratch | partial "function/id.html" -}}
+    <div class="mermaid" id="{{ $id }}"></div>
+    {{- .Page.Scratch.SetInMap "this" "mermaid" true -}}
+{{ end }}
