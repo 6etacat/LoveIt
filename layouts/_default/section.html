@@ -12,13 +12,15 @@
         {{- /* Paginate */ -}}
         {{- if .Pages -}}
             {{- $pages := .Pages.GroupByDate "2006" -}}
-            {{- with .Site.Params.section.paginate | default .Site.Params.paginate -}}
+            {{- with $.Page.Params.Paginate | default .Site.Params.section.paginate | default .Site.Params.paginate -}}
                 {{- $pages = $.Paginate $pages . -}}
             {{- else -}}
                 {{- $pages = .Paginate $pages -}}
             {{- end -}}
             {{- range $pages.PageGroups -}}
-                <h3 class="group-title">{{ .Key }}</h3>
+                {{- if ne $.Page.Params.ShowGroupTitle false -}}
+                    <h3 class="group-title">{{ .Key }}</h3>
+                {{- end -}}
                 {{- range .Pages -}}
                     {{- if eq (cond (ne $.Page.Summary "") $.Page.Summary $.Site.Params.section.summary) true -}}
                         {{- .Render "summary" -}}
