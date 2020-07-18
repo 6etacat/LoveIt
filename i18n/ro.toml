@@ -47,7 +47,8 @@ other = "Schimbare Temă"
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "Realizat de către {{ .Hugo }} | Temă - {{ .Theme }}"
+other = "Realizat de către {{ .Hugo }}"
+# other = "Realizat de către {{ .Hugo }} | Temă - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===

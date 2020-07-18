@@ -47,7 +47,8 @@ other = "Trocar tema"
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "Movido a {{ .Hugo }} | Tema - {{ .Theme }}"
+other = "Movido a {{ .Hugo }}"
+# other = "Movido a {{ .Hugo }} | Tema - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===

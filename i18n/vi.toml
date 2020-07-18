@@ -46,7 +46,8 @@ other = "Đổi chủ đề"
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "Cung cấp bởi {{ .Hugo }} | Chủ đề - {{ .Theme }}"
+other = "Cung cấp bởi {{ .Hugo }}"
+# other = "Cung cấp bởi {{ .Hugo }} | Chủ đề - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===

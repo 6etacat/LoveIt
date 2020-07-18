@@ -47,7 +47,8 @@ other = "Przełącz schemat"
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "Napędzany przez {{ .Hugo }} | Szablon - {{ .Theme }}"
+other = "Napędzany przez {{ .Hugo }}"
+# other = "Napędzany przez {{ .Hugo }} | Szablon - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===

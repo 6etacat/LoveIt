@@ -47,7 +47,8 @@ other = "Промени Тему"
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "Покреће {{ .Hugo }} | Тема - {{ .Theme }}"
+other = "Покреће {{ .Hugo }}"
+# other = "Покреће {{ .Hugo }} | Тема - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
