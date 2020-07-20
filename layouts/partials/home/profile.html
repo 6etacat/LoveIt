@@ -1,24 +1,27 @@
 {{- $profile := .Site.Params.home.profile -}}
 <div class="home-profile">
     {{- $avatar := $profile.avatarURL -}}
-    {{- with $profile.gravatarEmail -}}
-        {{- $avatar = md5 . | printf "https://www.gravatar.com/avatar/%v?s=240&d=mp" -}}
-    {{- end -}}
-    {{- if $avatar -}}
-        <div class="home-avatar">
-            {{- $menus := $.Site.Menus.main | default slice -}}
-            {{- with index $menus 0 -}}
-                {{- $url := $.Site.Params.Home.Profile.AvatarLink | default .URL | relLangURL -}}
-                {{- with .Page -}}
-                    {{- $url = .RelPermalink -}}
+    {{- with $profile.avatarTitle | default $avatar -}}
+        {{- $title := . -}}
+        {{- with $profile.gravatarEmail -}}
+            {{- $avatar = md5 . | printf "https://www.gravatar.com/avatar/%v?s=240&d=mp" -}}
+        {{- end -}}
+        {{- if $avatar -}}
+            <div class="home-avatar">
+                {{- $menus := $.Site.Menus.main | default slice -}}
+                {{- with index $menus 0 -}}
+                    {{- $url := $.Site.Params.Home.Profile.AvatarLink | default .URL | relLangURL -}}
+                    {{- with .Page -}}
+                        {{- $url = .RelPermalink -}}
+                    {{- end -}}
+                    <a href="{{ $url }}"{{ with .Title | default .Name }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                        {{- dict "Src" $avatar "Title" $title | partial "plugin/image.html" -}}
+                    </a>
+                {{- else -}}
+                    {{- dict "Src" $avatar "Title" $title | partial "plugin/image.html" -}}
                 {{- end -}}
-                <a href="{{ $url }}"{{ with .Title | default .Name }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
-                    {{- dict "Src" $avatar | partial "plugin/image.html" -}}
-                </a>
-            {{- else -}}
-                {{- dict "Src" $avatar | partial "plugin/image.html" -}}
-            {{- end -}}
-        </div>
+            </div>
+        {{- end -}}
     {{- end -}}
 
     {{- with $profile.title -}}
