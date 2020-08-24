@@ -11,7 +11,11 @@
 
         {{- /* Paginate */ -}}
         {{- if .Pages -}}
-            {{- $pages := .Pages.GroupByDate "2006" -}}
+            {{- $ordering := cond (eq $.Page.Params.DescendingGroups true) "desc" "asc" -}}
+            {{- $pages := .Pages.GroupByDate "2006" $ordering -}}
+            {{- if $.Page.Params.GroupByWeight -}}
+                {{- $pages = .Pages.GroupByParam "weight" $ordering -}}
+            {{- end -}}
             {{- with $.Page.Params.Paginate | default .Site.Params.section.paginate | default .Site.Params.paginate -}}
                 {{- $pages = $.Paginate $pages . -}}
             {{- else -}}
