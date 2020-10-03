@@ -10,10 +10,10 @@ other = "Наверх"
 other = "Посмотреть комментарии"
 # === baseof ==
 
-# === Post ===
-[posts]
-other = "Статьи"
-# === Post ===
+# === Blog ===
+[blog]
+other = "Сообщения в блоге"
+# === Blog ===
 
 # === Taxonomy ===
 [allSome]
@@ -102,7 +102,7 @@ other = "Учить больше"
 other = "Поделиться в"
 # === partials/plugin/share.html ===
 
-# === posts/single.html ===
+# === blog/single.html ===
 [contents]
 other = "Содержание"
 
@@ -140,7 +140,7 @@ other = "Домой"
 
 [readMore]
 other = "Читать больше"
-# === posts/single.html ===
+# === blog/single.html ===
 
 # === 404.html ===
 [pageNotFound]

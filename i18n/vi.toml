@@ -9,10 +9,10 @@ other = "Lên trên"
 other = "Xem bình luận"
 # === baseof ==
 
-# === Post ===
-[posts]
-other = "Bài viết"
-# === Post ===
+# === Blog ===
+[blog]
+other = "Bài đăng trên blog"
+# === Blog ===
 
 # === Taxonomy ===
 [allSome]
@@ -101,7 +101,7 @@ other = "Tìm hiểu thêm"
 other = "Chia sẻ trên"
 # === partials/plugin/share.html ===
 
-# === posts/single.html ===
+# === blog/single.html ===
 [contents]
 other = "Nội dung"
 
@@ -139,7 +139,7 @@ other = "Trang chủ"
 
 [readMore]
 other = "Đọc thêm"
-# === posts/single.html ===
+# === blog/single.html ===
 
 # === 404.html ===
 [pageNotFound]

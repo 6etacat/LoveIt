@@ -10,10 +10,10 @@ other = "Înapoi Sus"
 other = "Vizualizare Comentarii"
 # === baseof ==
 
-# === Post ===
-[posts]
-other = "Articole"
-# === Post ===
+# === Blog ===
+[blog]
+other = "Postări pe Blog"
+# === Blog ===
 
 # === Taxonomy ===
 [allSome]
@@ -102,7 +102,7 @@ other = "Aflați mai multe"
 other = "Distribuie pe"
 # === partials/plugin/share.html ===
 
-# === posts/single.html ===
+# === blog/single.html ===
 [contents]
 other = "Cuprins"
 
@@ -140,7 +140,7 @@ other = "Acasă"
 
 [readMore]
 other = "Citește mai mult"
-# === posts/single.html ===
+# === blog/single.html ===
 
 # === 404.html ===
 [pageNotFound]

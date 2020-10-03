@@ -10,10 +10,10 @@ other = "回到顶部"
 other = "查看评论"
 # === baseof ==
 
-# === Post ===
-[posts]
-other = "文章"
-# === Post ===
+# === Blog ===
+[blog]
+other = "博文"
+# === Blog ===
 
 # === Taxonomy ===
 [allSome]
@@ -105,7 +105,7 @@ other = "了解更多"
 other = "分享到"
 # === partials/plugin/share.html ===
 
-# === posts/single.html ===
+# === blog/single.html ===
 [contents]
 other = "目录"
 
@@ -141,7 +141,7 @@ other = "主页"
 
 [readMore]
 other = "阅读全文"
-# === posts/single.html ===
+# === blog/single.html ===
 
 # === 404.html ===
 [pageNotFound]

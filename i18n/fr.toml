@@ -10,10 +10,10 @@ other = "Retour en Haut"
 other = "Afficher les Commentaires"
 # === baseof ==
 
-# === Post ===
-[posts]
-other = "Posts"
-# === Post ===
+# === Blog ===
+[blog]
+other = "Articles de Blog"
+# === Blog ===
 
 # === Taxonomy ===
 [allSome]
@@ -102,7 +102,7 @@ other = "Apprendre encore plus"
 other = "Partager sur"
 # === partials/plugin/share.html ===
 
-# === posts/single.html ===
+# === blog/single.html ===
 [contents]
 other = "Contenu"
 
@@ -140,7 +140,7 @@ other = "Accueil"
 
 [readMore]
 other = "En savoir plus"
-# === posts/single.html ===
+# === blog/single.html ===
 
 # === 404.html ===
 [pageNotFound]

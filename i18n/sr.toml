@@ -10,10 +10,10 @@ other = "Назад на Врх"
 other = "Погледај Коментаре"
 # === baseof ==
 
-# === Post ===
-[posts]
-other = "Постови"
-# === Post ===
+# === Blog ===
+[blog]
+other = "Блог Постс"
+# === Blog ===
 
 # === Taxonomy ===
 [allSome]
@@ -99,7 +99,7 @@ other = "Сазнајте више"
 other = "Подели на"
 # === partials/plugin/share.html ===
 
-# === posts/single.html ===
+# === blog/single.html ===
 [contents]
 other = "Садржаји"
 
@@ -137,7 +137,7 @@ other = "Почетна"
 
 [readMore]
 other = "Прочитај више"
-# === posts/single.html ===
+# === blog/single.html ===
 
 # === 404.html ===
 [pageNotFound]
