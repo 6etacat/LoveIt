@@ -195,7 +195,8 @@ code, pre, .highlight table, .highlight tr, .highlight td {
   /* CommentSingle */  .c1,
   /* CommentSpecial */  .cs,
   /* CommentPreproc */  .cp,
-  /* CommentPreprocFile */  .cpf { font-style: italic }
+  /* CommentPreprocFile */  .cpf { font-style: bold }
+  /* GenericPrompt */  .cpf { font-style: italic }
   /* GenericUnderline */  .gl { text-decoration: underline }
 
   @each $class, $color in $code-highlight-color-map {

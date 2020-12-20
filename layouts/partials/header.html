@@ -2,7 +2,7 @@
 <header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="{{ .Site.Home.RelPermalink }}" title="{{ .Site.Title }}">
+            <a href="{{ .Site.Home.RelPermalink }}" title="{{ T `home` }}">
                 {{- with .Site.Params.header.title -}}
                     {{- with .logo -}}
                         {{- dict "Src" . "Class" "logo" | partial "plugin/image.html" -}}
@@ -40,7 +40,7 @@
                     <span class="menu-item delimiter"></span>
                 {{- end -}}
                 {{- if .Site.IsMultiLingual -}}
-                    <a href="javascript:void(0);" class="menu-item language" title="{{ T "selectLanguage" }}">
+                    <a href="javascript:void(0);" class="menu-item language" title="{{ T `selectLanguage` }}">
                         {{- .Language.LanguageName -}}
                         <i class="fas fa-chevron-right fa-fw"></i>
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;">
@@ -76,9 +76,11 @@
                         </span>
                     </span>
                 {{- end -}}
+                {{- if .Site.Params.switchTheme -}}
                 <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
+                {{- end -}}
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 {{- define "content" -}}
     {{- $params := .Scratch.Get "params" -}}
-    <div class="page single special">
+    <div class="page single">
         {{- /* Title */ -}}
         <h1 class="{{ cond (eq .Site.Params.AnimateTitle true) `single-title animated pulse faster` `single-title` }}">
             {{- .Title -}}

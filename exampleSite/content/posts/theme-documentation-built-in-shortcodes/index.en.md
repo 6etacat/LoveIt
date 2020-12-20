@@ -111,15 +111,7 @@ The rendered output looks like this:
 
 [Documentation of `instagram`](https://gohugo.io/content-management/shortcodes#instagram)
 
-Example `instagram` input:
-
-```markdown
-{{</* instagram BWNjjyYFxVx hidecaption */>}}
-```
-
-The rendered output looks like this:
-
-{{< instagram BWNjjyYFxVx hidecaption >}}
+DEPRECATED
 
 ## 5 param
 
